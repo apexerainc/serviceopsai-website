@@ -35,7 +35,37 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Scroll reveal animations */
+/* ── Tech grid background ── */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(37, 99, 235, 0.08), transparent);
+  pointer-events: none;
+}
+
+/* ── Typing cursor ── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+  color: var(--accent);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+/* ── Scroll reveal animations ── */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -52,6 +82,27 @@ body {
   to { opacity: 1; }
 }
 
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.15); }
+  50% { box-shadow: 0 0 24px 4px rgba(37, 99, 235, 0.1); }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -60,7 +111,33 @@ body {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Feature card hover */
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ── Staggered entrance delays ── */
+.stagger-1 { animation-delay: 200ms; }
+.stagger-2 { animation-delay: 400ms; }
+.stagger-3 { animation-delay: 600ms; }
+.stagger-4 { animation-delay: 800ms; }
+
+/* ── Glassmorphism ── */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ── Feature card hover ── */
 .feature-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -70,7 +147,7 @@ body {
   box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
 }
 
-/* Accordion transition */
+/* ── Accordion transition ── */
 .accordion-content {
   display: grid;
   grid-template-rows: 0fr;
@@ -83,4 +160,11 @@ body {
 
 .accordion-inner {
   overflow: hidden;
+}
+
+/* ── Dashboard mockup ── */
+.dashboard-shadow {
+  box-shadow:
+    0 24px 48px -12px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
 }

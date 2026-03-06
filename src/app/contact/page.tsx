@@ -6,7 +6,7 @@ import { ContactInfo } from "@/components/contact/contact-info";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Service Ops AI. Start your free trial or ask us anything about automating your service business.",
+    "Get in touch with Service Ops AI. Request your free audit or ask us anything about automating your service business.",
 };
 
 export default function ContactPage() {

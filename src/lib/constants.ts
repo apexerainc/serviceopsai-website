@@ -181,7 +181,7 @@ export const PRICING_TIERS: PricingTier[] = [
       "Email notifications",
       "Standard support",
     ],
-    cta: "Start Free Trial",
+    cta: "Get Free Audit",
   },
   {
     name: "Professional",
@@ -202,7 +202,7 @@ export const PRICING_TIERS: PricingTier[] = [
       "Priority support",
     ],
     highlighted: true,
-    cta: "Start Free Trial",
+    cta: "Get Free Audit",
   },
   {
     name: "Enterprise",
@@ -391,9 +391,9 @@ export const FAQS: FAQ[] = [
       "Your data belongs to you. If you decide to cancel, you can export all your data at any time. We retain your data for 30 days after cancellation in case you change your mind, then permanently delete it.",
   },
   {
-    question: "Is there a free trial?",
+    question: "How does the free audit work?",
     answer:
-      "Yes! Every plan comes with a 14-day free trial with no credit card required. You get full access to all features in your chosen plan so you can see exactly how Service Ops AI will work for your business.",
+      "We analyze your current operations workflow and deliver a custom report showing exactly where automation can save you time and money. The audit is completely free, takes about 48 hours, and comes with a personalized implementation roadmap — no commitment required.",
   },
   {
     question: "How does the AI scheduling actually work?",

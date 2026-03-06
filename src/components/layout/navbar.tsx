@@ -37,8 +37,8 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button size="sm" href="/contact">
-              Get Started
+            <Button size="sm" variant="accent" href="/contact">
+              Get Free Audit
             </Button>
           </div>
 
@@ -72,8 +72,8 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="px-4 pt-2">
-                <Button size="sm" href="/contact" className="w-full">
-                  Get Started
+                <Button size="sm" variant="accent" href="/contact" className="w-full">
+                  Get Free Audit
                 </Button>
               </div>
             </div>

@@ -12,11 +12,11 @@ export function CTABanner() {
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
             Join 500+ service businesses that have streamlined their operations
-            with Service Ops AI. Start your free trial today.
+            with Service Ops AI. Get your free audit today.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" variant="accent" href="/contact">
-              Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
+              Get Free Audit <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button size="lg" variant="secondary" href="/pricing">
               View Pricing
